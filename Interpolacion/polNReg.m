@@ -5,24 +5,16 @@ function [p, yi, m] = polNReg(x, y, xi)
   
   %obtener tabla de diferencias
   
-  for j = 2:n
-    for i=1:n-j+1
-      m(i,j) = (m(i+1, j-1)-m(i,j-1))/((x(i+j-1)-x(i))) ;
-     end
-  end
+  m = tablaReg(x, n, m);
   %calcular el dato interpolado
-  xt=1;
-  yi=m(1,1);
-  for j=1:n-1;
-    xt=xt.*(xi-x(j));
-    yi=yi+m(1,j+1)*xt;
-  end
+  yi = evaluarEnPunto(m, n, xi,x);
+  
   %construir el polinomio
-  p = num2str(m(end ,1));
+  p = num2str(m(n ,1));
   xx = x*-1;
   for j=2:n
     signo = '';
-    if m(1,j) > 0
+    if m(n,j) > 0
       signo = '+';
     end
     xt = '';
@@ -33,7 +25,7 @@ function [p, yi, m] = polNReg(x, y, xi)
       end
       xt = strcat(xt,'*(x',signo2, num2str(xx(i)),')');
     end
-    p = strcat(p, signo, num2str(m(1,j)), xt);
+    p = strcat(p, signo, num2str(m(n,j)), xt);
   end
   
 endfunction
