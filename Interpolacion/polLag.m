@@ -9,6 +9,6 @@ function [yi] = polLag(x, y, xi)
       endif
     endfor
     sm = sm + y(i) * pr;
-    disp(sm);
   endfor
+  disp(sm);
 endfunction
