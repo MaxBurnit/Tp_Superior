@@ -12,14 +12,18 @@ namespace FINTER.Calculos
         {
             int[] equis = (int[])x.Clone();
             int sm = 0;
-            for (int i = 0; i <= (equis.Length - 1); i++)
+            for (int i = 0; i < (equis.Length); i++)
             {
-                int pr = 1;
-                for (int j = 0; j <= (equis.Length - 1); j++)
+                int num = 1;
+		int den = 1;
+		int pr = 1;
+                for (int j = 0; j < (equis.Length); j++)
                 {
                     if (j != i)
                     {
-                        pr = pr * (xi - x[j]) / (x[i] - x[j]);
+                        num = num * (xi - x[j]);
+			den = den * (x[i] - x[j]);
+			pr = num / den;
                     }
                 }
                 sm = sm + (y[i] * pr);
