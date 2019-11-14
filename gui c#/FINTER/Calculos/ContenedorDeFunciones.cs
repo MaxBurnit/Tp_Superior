@@ -160,5 +160,23 @@ namespace FINTER.Calculos
 		}
 		Console.WriteLine(sm);
 	}
-    }
+	public static void mostrarPolinomiosLagrange(int[] x){
+		int n = x.Length;
+		string s = x.ToString();
+		for(int i = 0; i < n; i++){
+			string numerador = " ";
+			string denominador = " ";
+			string polinomio = " ";
+			int den = 1; 
+			for(int j = 0; j < n; j++){
+				if(j != i){
+					numerador = numerador + "(x-(" + x[j].ToString() +"))"; 
+					den = den * (x[i] - x[j]); 
+					denominador = den.ToString();  
+				}
+			} 
+			polinomio = "L(" + i.ToString() +")=" + numerador + "/" + denominador; 
+			Console.WriteLine(polinomio);
+		}
+	}
 }
