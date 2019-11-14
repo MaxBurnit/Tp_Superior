@@ -54,6 +54,21 @@ namespace FINTER
                 gbox1.Visible = true;
                 gbox2.Visible = true;
             }
+
+            if (cmbMetodos.SelectedItem.ToString() == "Newton-Gregory Regresivo")
+            {
+
+                NewtonGregoryReg calculador = new NewtonGregoryReg();
+
+                int[,] matrizDeDiferencias = calculador
+                    .tablaDeDiferenciasRegresivo(xIngresados, xIngresados.Length, matrizAux);
+                String resultadoPolinomio = calculador.calcularPolinomioRegresivo(matrizDeDiferencias, xIngresados.Length, xIngresados);
+
+                lblResultado.Text = "P(x)= " + resultadoPolinomio;
+
+                gbox1.Visible = true;
+                gbox2.Visible = true;
+            }
         }
 
         private void btnEvaluar_Click(object sender, EventArgs e)
@@ -79,6 +94,21 @@ namespace FINTER
                 int[,] matrizDeDiferencias = calculador
                     .tablaDeDiferenciasProgresivo(xIngresados, xIngresados.Length, matrizAux);
                 int resultadoPunto = calculador.evaluarEnUnPunto(matrizAux, xIngresados.Length, int.Parse(txtPunto.Text),xIngresados);
+                lblResultadoPunto.Text = "P(" + txtPunto.Text + ")= " + resultadoPunto.ToString();
+
+                gbox1.Visible = true;
+                gbox2.Visible = true;
+            }
+
+
+            if (cmbMetodos.SelectedItem.ToString() == "Newton-Gregory Regresivo")
+            {
+
+                NewtonGregoryReg calculador = new NewtonGregoryReg();
+
+                int[,] matrizDeDiferencias = calculador
+                    .tablaDeDiferenciasRegresivo(xIngresados, xIngresados.Length, matrizAux);
+                int resultadoPunto = calculador.evaluarEnUnPunto(matrizAux, xIngresados.Length, int.Parse(txtPunto.Text), xIngresados);
                 lblResultadoPunto.Text = "P(" + txtPunto.Text + ")= " + resultadoPunto.ToString();
 
                 gbox1.Visible = true;

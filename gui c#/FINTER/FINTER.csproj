@@ -52,6 +52,7 @@
     <Compile Include="AppFinter.Designer.cs">
       <DependentUpon>AppFinter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calculos\NewtonGregoryReg.cs" />
     <Compile Include="Calculos\ContenedorDeFunciones.cs" />
     <Compile Include="Calculos\NewtonGregoryProg.cs" />
     <Compile Include="Program.cs" />
