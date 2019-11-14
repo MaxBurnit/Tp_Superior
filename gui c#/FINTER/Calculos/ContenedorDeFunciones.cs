@@ -146,5 +146,19 @@ namespace FINTER.Calculos
             return resultado;
 
         }
+	public static void calcularPolinomioLagrange(int[] x,int[] y, int xi){
+		int[] equis = (int[])x.Clone();
+		int sm = 0;
+		for(int i = 0; i <= (equis.Length- 1); i++){
+			int pr = 1;
+			for(int j = 0; j <= (equis.Length- 1); j++){
+				if (j != i){
+					pr = pr * (xi - x[j])/(x[i] - x[j]);
+				}
+			}
+			sm = sm + (y[i] * pr);
+		}
+		Console.WriteLine(sm);
+	}
     }
 }
