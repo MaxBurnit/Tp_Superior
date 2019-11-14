@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FINTER.Calculos;
+using FINTER.Pasos;
 
 namespace FINTER
 {
@@ -30,6 +31,8 @@ namespace FINTER
             int[] yIngresados = Array.ConvertAll(txtYs.Text.Split(','), s => int.Parse(s));
 
             int[,] matrizAux = new int[xIngresados.Length, yIngresados.Length];
+            int gradoPolinomio = xIngresados.Length - 1;
+            lblGradoPolinomio.Text = "Grado de P(x): " + gradoPolinomio.ToString();
 
             //asigno todas las ys en la primer columna de la matriz
 
@@ -63,6 +66,19 @@ namespace FINTER
                 int[,] matrizDeDiferencias = calculador
                     .tablaDeDiferenciasRegresivo(xIngresados, xIngresados.Length, matrizAux);
                 String resultadoPolinomio = calculador.calcularPolinomioRegresivo(matrizDeDiferencias, xIngresados.Length, xIngresados);
+
+                lblResultado.Text = "P(x)= " + resultadoPolinomio;
+
+                gbox1.Visible = true;
+                gbox2.Visible = true;
+            }
+
+            if (cmbMetodos.SelectedItem.ToString() == "Lagrange")
+            {
+
+                Lagrange calculador = new Lagrange();
+
+                String resultadoPolinomio = calculador.polinomioFinal(xIngresados, yIngresados);
 
                 lblResultado.Text = "P(x)= " + resultadoPolinomio;
 
@@ -113,6 +129,65 @@ namespace FINTER
 
                 gbox1.Visible = true;
                 gbox2.Visible = true;
+            }
+
+
+            if (cmbMetodos.SelectedItem.ToString() == "Lagrange")
+            {
+
+                Lagrange calculador = new Lagrange();
+                int resultadoPunto = calculador.calcularPolinomioLagrange(xIngresados, yIngresados, int.Parse(txtPunto.Text));
+                lblResultadoPunto.Text = "P(" + txtPunto.Text + ")= " + resultadoPunto.ToString();
+
+                gbox1.Visible = true;
+                gbox2.Visible = true;
+            }
+
+        }
+
+        private void btnPasosCalculo_Click(object sender, EventArgs e)
+        {
+            int[] xIngresados = Array.ConvertAll(txtXs.Text.Split(','), s => int.Parse(s));
+            int[] yIngresados = Array.ConvertAll(txtYs.Text.Split(','), s => int.Parse(s));
+
+            int[,] matrizAux = new int[xIngresados.Length, yIngresados.Length];
+
+            for (int i = 0; i < yIngresados.Length; i++)
+            {
+
+                matrizAux[i, 0] = yIngresados[i];
+
+            }
+
+            if (cmbMetodos.SelectedItem.ToString() == "Newton-Gregory Progresivo")
+            {
+                NewtonGregoryProg calculador = new NewtonGregoryProg();
+                int[,] matrizDiferencias = calculador.tablaDeDiferenciasProgresivo(xIngresados, xIngresados.Length, matrizAux);
+
+                Form pantallaPasos = new PasosNewtonProgForm(matrizDiferencias);
+                pantallaPasos.Show();
+
+            }
+
+            if (cmbMetodos.SelectedItem.ToString() == "Newton-Gregory Regresivo")
+            {
+                NewtonGregoryReg calculador = new NewtonGregoryReg();
+                int[,] matrizDiferencias = calculador.tablaDeDiferenciasRegresivo(xIngresados, xIngresados.Length, matrizAux);
+
+                Form pantallaPasos = new PasosNewtonRegForm(matrizDiferencias);
+                pantallaPasos.Show();
+
+            }
+
+
+            if (cmbMetodos.SelectedItem.ToString() == "Lagrange")
+            {
+                Lagrange calculador = new Lagrange();
+                String polinomios = calculador.mostrarPolinomiosLagrange(xIngresados);
+
+                Form pantallaPasos = new LagrangeForm(polinomios, xIngresados.Length);
+                pantallaPasos.Show();
+
             }
 
         }

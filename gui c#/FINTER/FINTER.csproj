@@ -52,13 +52,41 @@
     <Compile Include="AppFinter.Designer.cs">
       <DependentUpon>AppFinter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calculos\Lagrange.cs" />
     <Compile Include="Calculos\NewtonGregoryReg.cs" />
     <Compile Include="Calculos\ContenedorDeFunciones.cs" />
     <Compile Include="Calculos\NewtonGregoryProg.cs" />
+    <Compile Include="Pasos\LagrangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasos\LagrangeForm.Designer.cs">
+      <DependentUpon>LagrangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasos\PasosNewtonRegForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasos\PasosNewtonRegForm.Designer.cs">
+      <DependentUpon>PasosNewtonRegForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pasos\PasosNewtonProgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pasos\PasosNewtonProgForm.Designer.cs">
+      <DependentUpon>PasosNewtonProgForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AppFinter.resx">
       <DependentUpon>AppFinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasos\LagrangeForm.resx">
+      <DependentUpon>LagrangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasos\PasosNewtonProgForm.resx">
+      <DependentUpon>PasosNewtonProgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pasos\PasosNewtonRegForm.resx">
+      <DependentUpon>PasosNewtonRegForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

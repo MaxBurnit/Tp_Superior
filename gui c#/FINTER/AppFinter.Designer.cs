@@ -35,6 +35,7 @@
             this.cmbMetodos = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.gbox1 = new System.Windows.Forms.GroupBox();
+            this.lblGradoPolinomio = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
@@ -43,8 +44,7 @@
             this.lblResultadoPunto = new System.Windows.Forms.Label();
             this.btnEvaluar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblGradoPolinomio = new System.Windows.Forms.Label();
+            this.btnPasosCalculo = new System.Windows.Forms.Button();
             this.gbox1.SuspendLayout();
             this.gbox2.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,15 @@
             this.gbox1.TabIndex = 7;
             this.gbox1.TabStop = false;
             // 
+            // lblGradoPolinomio
+            // 
+            this.lblGradoPolinomio.AutoSize = true;
+            this.lblGradoPolinomio.Location = new System.Drawing.Point(6, 91);
+            this.lblGradoPolinomio.Name = "lblGradoPolinomio";
+            this.lblGradoPolinomio.Size = new System.Drawing.Size(97, 17);
+            this.lblGradoPolinomio.TabIndex = 3;
+            this.lblGradoPolinomio.Text = "Grado de P(x)";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -143,7 +152,7 @@
             this.gbox2.Controls.Add(this.lblResultadoPunto);
             this.gbox2.Controls.Add(this.btnEvaluar);
             this.gbox2.Controls.Add(this.label4);
-            this.gbox2.Controls.Add(this.button1);
+            this.gbox2.Controls.Add(this.btnPasosCalculo);
             this.gbox2.Location = new System.Drawing.Point(15, 325);
             this.gbox2.Name = "gbox2";
             this.gbox2.Size = new System.Drawing.Size(676, 169);
@@ -185,23 +194,15 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Evaluar P(x) en un valor k";
             // 
-            // button1
+            // btnPasosCalculo
             // 
-            this.button1.Location = new System.Drawing.Point(506, 100);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 58);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "MOSTRAR PASOS DE CALCULO";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblGradoPolinomio
-            // 
-            this.lblGradoPolinomio.AutoSize = true;
-            this.lblGradoPolinomio.Location = new System.Drawing.Point(6, 91);
-            this.lblGradoPolinomio.Name = "lblGradoPolinomio";
-            this.lblGradoPolinomio.Size = new System.Drawing.Size(97, 17);
-            this.lblGradoPolinomio.TabIndex = 3;
-            this.lblGradoPolinomio.Text = "Grado de P(x)";
+            this.btnPasosCalculo.Location = new System.Drawing.Point(506, 100);
+            this.btnPasosCalculo.Name = "btnPasosCalculo";
+            this.btnPasosCalculo.Size = new System.Drawing.Size(153, 58);
+            this.btnPasosCalculo.TabIndex = 0;
+            this.btnPasosCalculo.Text = "MOSTRAR PASOS DE CALCULO";
+            this.btnPasosCalculo.UseVisualStyleBackColor = true;
+            this.btnPasosCalculo.Click += new System.EventHandler(this.btnPasosCalculo_Click);
             // 
             // AppFinter
             // 
@@ -244,7 +245,7 @@
         private System.Windows.Forms.Label lblResultadoPunto;
         private System.Windows.Forms.Button btnEvaluar;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPasosCalculo;
         private System.Windows.Forms.Label lblGradoPolinomio;
     }
 }
