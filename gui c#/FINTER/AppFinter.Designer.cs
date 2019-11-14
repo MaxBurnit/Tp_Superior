@@ -84,7 +84,7 @@
             // cmbMetodos
             // 
             this.cmbMetodos.FormattingEnabled = true;
-            this.cmbMetodos.Location = new System.Drawing.Point(321, 152);
+            this.cmbMetodos.Location = new System.Drawing.Point(321, 139);
             this.cmbMetodos.Name = "cmbMetodos";
             this.cmbMetodos.Size = new System.Drawing.Size(175, 24);
             this.cmbMetodos.TabIndex = 5;
@@ -92,7 +92,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 155);
+            this.label3.Location = new System.Drawing.Point(70, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(225, 17);
             this.label3.TabIndex = 6;
@@ -138,7 +138,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(524, 185);
+            this.btnCalcular.Location = new System.Drawing.Point(524, 201);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(150, 118);
             this.btnCalcular.TabIndex = 8;
