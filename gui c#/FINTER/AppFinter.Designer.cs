@@ -28,37 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtXs = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtYs = new System.Windows.Forms.TextBox();
             this.cmbMetodos = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.gbox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.gbox2 = new System.Windows.Forms.GroupBox();
+            this.txtPunto = new System.Windows.Forms.TextBox();
+            this.lblResultadoPunto = new System.Windows.Forms.Label();
+            this.btnEvaluar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblGradoPolinomio = new System.Windows.Forms.Label();
+            this.gbox1.SuspendLayout();
+            this.gbox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnCalcular
+            // txtXs
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(370, 21);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(144, 58);
-            this.btnCalcular.TabIndex = 0;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(321, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 22);
-            this.textBox1.TabIndex = 1;
+            this.txtXs.Location = new System.Drawing.Point(321, 41);
+            this.txtXs.Name = "txtXs";
+            this.txtXs.Size = new System.Drawing.Size(175, 22);
+            this.txtXs.TabIndex = 1;
             // 
             // label1
             // 
@@ -78,12 +74,12 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Ingrese valores de y (seguidos de una coma)";
             // 
-            // textBox2
+            // txtYs
             // 
-            this.textBox2.Location = new System.Drawing.Point(321, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtYs.Location = new System.Drawing.Point(321, 93);
+            this.txtYs.Name = "txtYs";
+            this.txtYs.Size = new System.Drawing.Size(175, 22);
+            this.txtYs.TabIndex = 4;
             // 
             // cmbMetodos
             // 
@@ -102,79 +98,154 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Seleccion metodo de interpolacion";
             // 
+            // gbox1
+            // 
+            this.gbox1.Controls.Add(this.lblGradoPolinomio);
+            this.gbox1.Controls.Add(this.label5);
+            this.gbox1.Controls.Add(this.lblResultado);
+            this.gbox1.Location = new System.Drawing.Point(12, 195);
+            this.gbox1.Name = "gbox1";
+            this.gbox1.Size = new System.Drawing.Size(496, 124);
+            this.gbox1.TabIndex = 7;
+            this.gbox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 54);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(159, 17);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Puntos equiespaciados:";
+            // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(14, 30);
+            this.lblResultado.Location = new System.Drawing.Point(6, 18);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(46, 17);
-            this.lblResultado.TabIndex = 7;
-            this.lblResultado.Text = "label4";
+            this.lblResultado.Size = new System.Drawing.Size(76, 17);
+            this.lblResultado.TabIndex = 0;
+            this.lblResultado.Text = "Resultado:";
             // 
-            // groupBox1
+            // btnCalcular
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.lblResultado);
-            this.groupBox1.Location = new System.Drawing.Point(15, 306);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(521, 133);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
+            this.btnCalcular.Location = new System.Drawing.Point(524, 185);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(150, 118);
+            this.btnCalcular.TabIndex = 8;
+            this.btnCalcular.Text = "CALCULAR";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
-            // groupBox2
+            // gbox2
             // 
-            this.groupBox2.Controls.Add(this.btnCalcular);
-            this.groupBox2.Location = new System.Drawing.Point(15, 199);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(520, 121);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
+            this.gbox2.Controls.Add(this.txtPunto);
+            this.gbox2.Controls.Add(this.lblResultadoPunto);
+            this.gbox2.Controls.Add(this.btnEvaluar);
+            this.gbox2.Controls.Add(this.label4);
+            this.gbox2.Controls.Add(this.button1);
+            this.gbox2.Location = new System.Drawing.Point(15, 325);
+            this.gbox2.Name = "gbox2";
+            this.gbox2.Size = new System.Drawing.Size(676, 169);
+            this.gbox2.TabIndex = 10;
+            this.gbox2.TabStop = false;
             // 
-            // button2
+            // txtPunto
             // 
-            this.button2.Location = new System.Drawing.Point(370, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 62);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "MOSTRAR PASOS DE CALCULO";
-            this.button2.UseVisualStyleBackColor = true;
+            this.txtPunto.Location = new System.Drawing.Point(225, 42);
+            this.txtPunto.Name = "txtPunto";
+            this.txtPunto.Size = new System.Drawing.Size(176, 22);
+            this.txtPunto.TabIndex = 4;
+            // 
+            // lblResultadoPunto
+            // 
+            this.lblResultadoPunto.AutoSize = true;
+            this.lblResultadoPunto.Location = new System.Drawing.Point(125, 100);
+            this.lblResultadoPunto.Name = "lblResultadoPunto";
+            this.lblResultadoPunto.Size = new System.Drawing.Size(71, 17);
+            this.lblResultadoPunto.TabIndex = 3;
+            this.lblResultadoPunto.Text = "resultado:";
+            // 
+            // btnEvaluar
+            // 
+            this.btnEvaluar.Location = new System.Drawing.Point(506, 23);
+            this.btnEvaluar.Name = "btnEvaluar";
+            this.btnEvaluar.Size = new System.Drawing.Size(153, 55);
+            this.btnEvaluar.TabIndex = 2;
+            this.btnEvaluar.Text = "EVALUAR";
+            this.btnEvaluar.UseVisualStyleBackColor = true;
+            this.btnEvaluar.Click += new System.EventHandler(this.btnEvaluar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(25, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Evaluar P(x) en un valor k";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(506, 100);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(153, 58);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "MOSTRAR PASOS DE CALCULO";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblGradoPolinomio
+            // 
+            this.lblGradoPolinomio.AutoSize = true;
+            this.lblGradoPolinomio.Location = new System.Drawing.Point(6, 91);
+            this.lblGradoPolinomio.Name = "lblGradoPolinomio";
+            this.lblGradoPolinomio.Size = new System.Drawing.Size(97, 17);
+            this.lblGradoPolinomio.TabIndex = 3;
+            this.lblGradoPolinomio.Text = "Grado de P(x)";
             // 
             // AppFinter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 451);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(698, 521);
+            this.Controls.Add(this.gbox2);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.gbox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbMetodos);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtYs);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtXs);
             this.Name = "AppFinter";
             this.Text = "FINTER";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.gbox1.ResumeLayout(false);
+            this.gbox1.PerformLayout();
+            this.gbox2.ResumeLayout(false);
+            this.gbox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtXs;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtYs;
         private System.Windows.Forms.ComboBox cmbMetodos;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbox1;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblResultado;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbox2;
+        private System.Windows.Forms.TextBox txtPunto;
+        private System.Windows.Forms.Label lblResultadoPunto;
+        private System.Windows.Forms.Button btnEvaluar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblGradoPolinomio;
     }
 }
 
