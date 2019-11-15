@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.gbox1 = new System.Windows.Forms.GroupBox();
             this.lblGradoPolinomio = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblPuntosEquiespaciados = new System.Windows.Forms.Label();
             this.lblResultado = new System.Windows.Forms.Label();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.gbox2 = new System.Windows.Forms.GroupBox();
@@ -101,7 +101,7 @@
             // gbox1
             // 
             this.gbox1.Controls.Add(this.lblGradoPolinomio);
-            this.gbox1.Controls.Add(this.label5);
+            this.gbox1.Controls.Add(this.lblPuntosEquiespaciados);
             this.gbox1.Controls.Add(this.lblResultado);
             this.gbox1.Location = new System.Drawing.Point(12, 195);
             this.gbox1.Name = "gbox1";
@@ -118,14 +118,14 @@
             this.lblGradoPolinomio.TabIndex = 3;
             this.lblGradoPolinomio.Text = "Grado de P(x)";
             // 
-            // label5
+            // lblPuntosEquiespaciados
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 54);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 17);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Puntos equiespaciados:";
+            this.lblPuntosEquiespaciados.AutoSize = true;
+            this.lblPuntosEquiespaciados.Location = new System.Drawing.Point(6, 54);
+            this.lblPuntosEquiespaciados.Name = "lblPuntosEquiespaciados";
+            this.lblPuntosEquiespaciados.Size = new System.Drawing.Size(159, 17);
+            this.lblPuntosEquiespaciados.TabIndex = 2;
+            this.lblPuntosEquiespaciados.Text = "Puntos equiespaciados:";
             // 
             // lblResultado
             // 
@@ -238,7 +238,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox gbox1;
         private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPuntosEquiespaciados;
         private System.Windows.Forms.Label lblResultado;
         private System.Windows.Forms.GroupBox gbox2;
         private System.Windows.Forms.TextBox txtPunto;

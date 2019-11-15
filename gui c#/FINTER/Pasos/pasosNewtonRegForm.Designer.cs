@@ -55,15 +55,15 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Matriz de diferencias";
             // 
-            // pasosNewtonRegForm
+            // PasosNewtonRegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(520, 490);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridDiferencias);
-            this.Name = "pasosNewtonRegForm";
-            this.Text = "Form1";
+            this.Name = "PasosNewtonRegForm";
+            this.Text = "FINTER";
             ((System.ComponentModel.ISupportInitialize)(this.gridDiferencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

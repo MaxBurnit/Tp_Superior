@@ -63,7 +63,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gridDiferencias);
             this.Name = "PasosNewtonProgForm";
-            this.Text = "Form1";
+            this.Text = "FINTER";
             ((System.ComponentModel.ISupportInitialize)(this.gridDiferencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

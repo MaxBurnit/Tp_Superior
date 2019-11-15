@@ -33,6 +33,8 @@ namespace FINTER
             int[,] matrizAux = new int[xIngresados.Length, yIngresados.Length];
             int gradoPolinomio = xIngresados.Length - 1;
             lblGradoPolinomio.Text = "Grado de P(x): " + gradoPolinomio.ToString();
+            lblPuntosEquiespaciados.Text = "Puntos equiespaciados: " + ContenedorDeFunciones.sonEquidistantes(xIngresados,
+                yIngresados);
 
             //asigno todas las ys en la primer columna de la matriz
 

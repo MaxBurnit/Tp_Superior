@@ -187,23 +187,24 @@ namespace FINTER.Calculos
                 Console.WriteLine(polinomio);
             }
         }
-	public static void sonEquidistantes(int[] x, int[] y){
-		int n = x.Length; 
-		string f = "TRUE";
-		if(n >= 3){
+	public static String sonEquidistantes(int[] x, int[] y)
+        {
+		    int n = x.Length;
+            String f = "SI";
+            if(n >= 3){
 			int dx = x[2] - x[1];
 			int dy = y[2] - y[1];
 			for(int i = 2; i < n-1; i++){
 				int difx = x[i+1] - x[i];
 				int dify = y[i+1] - y[i];
 				if(difx != dx || dify != dy){
-					f = "FALSE";
+					f = "NO";
 					Console.Write(f);
-					return;
+					return f;
 				}
 			}
-		}
-	Console.Write(f);
-	}
+		  }
+            return f;
+	    }
     }
 }
